@@ -10,31 +10,29 @@
         android:id="@+id/header_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor= "@color/payo_primary"
-        >
+        app:cardBackgroundColor="@color/payo_primary">
 
-    <TextView
-        android:text="Login"
-        android:textSize="40sp"
-        android:fontFamily="@font/montserratbold"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="50dp"
+            android:fontFamily="@font/montserratbold"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
 
     </androidx.cardview.widget.CardView>
-    
+
     <TextView
         android:id="@+id/already"
-        android:layout_below="@+id/header_login"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/already"
-        android:fontFamily="@font/montserratsemibold"
-        android:textSize="20sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/montserratsemibold"
+        android:text="@string/already"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/here"
@@ -112,7 +110,14 @@
         android:textAllCaps="false"
         android:fontFamily="@font/montserratsemibold"
         android:textSize="25sp"
-
+        android:background="@drawable/roundbtn"
         />
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>

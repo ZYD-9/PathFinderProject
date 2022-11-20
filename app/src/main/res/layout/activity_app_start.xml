@@ -21,7 +21,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/loginbtn_start"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/trackicons_holder"
@@ -36,9 +36,10 @@
         />
 
     <Button
+        android:id="@+id/registerbtn_start"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/loginbtn"
+        android:layout_below="@id/loginbtn_start"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/roundbtn"
