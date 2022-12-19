@@ -1,53 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/payo_primary"
     tools:context=".AppStart">
 
     <LinearLayout
-        android:id="@+id/trackicons_holder"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:background="@color/payo_primary"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:src="@drawable/tracklogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:background="@color/white"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/wave1" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/loginbtn_start"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/trackicons_holder"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:fontFamily="@font/montserratsemibold"
-        android:textSize="25sp"
-        android:background="@drawable/roundbtn"
-        />
 
-    <Button
-        android:id="@+id/registerbtn_start"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/loginbtn_start"
+    <LinearLayout
+        android:id="@+id/logontxt_holder"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="130dp"
+            android:src="@drawable/payologo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:textStyle="bold"
+            android:text="Welcome to PAYO"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:text="Its time to find your path"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signinbtn_start"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/logontxt_holder"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:background="@drawable/roundbtn"
-        android:fontFamily="@font/montserratsemibold"
-        android:text="Register"
+        android:text="Sign In"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="12dp"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="604dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signupbtn_start"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/signinbtn_start"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/roundbtn"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="604dp" />
 
 
 </RelativeLayout>

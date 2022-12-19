@@ -9,40 +9,59 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
-public class Register extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
-EditText username;
-EditText email_new;
-EditText password_new;
-Button register;
-ProgressBar progressBar;
+    ImageButton gotoAppStart;
+    EditText username;
+    EditText firstname;
+    EditText lastname;
+    EditText email_new;
+    EditText password_new;
+    Button signUp;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-        username = findViewById(R.id.username_field);
-        email_new = findViewById(R.id.new_email_field);
-        password_new = findViewById(R.id.new_password_field);
-        register = findViewById(R.id.registerbtn);
+        setContentView(R.layout.activity_signup);
+        gotoAppStart = findViewById(R.id.signupbtn_back);
+        username = findViewById(R.id.username_in);
+        firstname = findViewById(R.id.firstname_in);
+        lastname = findViewById(R.id.lastname_in);
+        email_new = findViewById(R.id.email_in);
+        password_new = findViewById(R.id.password_in);
+        signUp = findViewById(R.id.signedup_btn);
         progressBar = findViewById(R.id.registration_progress);
-        registerIn();
+        signedUp();
+        toAppStart();
 
 
     }
 
-    private void registerIn() {
-
-        Toast.makeText(Register.this,"register method",Toast.LENGTH_LONG).show();
-        register.setOnClickListener(new View.OnClickListener() {
+    private void toAppStart() {
+        gotoAppStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Register.this,"register clicked",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(),AppStart.class);
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void signedUp() {
+
+        Toast.makeText(SignUp.this,"register method",Toast.LENGTH_LONG).show();
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SignUp.this,"register clicked",Toast.LENGTH_LONG).show();
 
            String email,password;
            email = email_new.getText().toString();
@@ -69,7 +88,7 @@ ProgressBar progressBar;
                               progressBar.setVisibility(View.GONE);
                               String result = putData.getResult();
                               if(result.equalsIgnoreCase("Sign Up Success")){
-                                  Intent intent = new Intent(getApplicationContext(),Login.class);
+                                  Intent intent = new Intent(getApplicationContext(), SignIn.class);
                                   startActivity(intent);
                               }
                               else {

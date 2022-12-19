@@ -9,38 +9,38 @@ import android.widget.Button;
 
 public class AppStart extends AppCompatActivity {
 
-    Button gotoRegister;
-    Button gotoLogin;
+    Button gotoSignUp;
+    Button gotoSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_start);
 
-        gotoRegister = findViewById(R.id.registerbtn_start);
-        gotoLogin = findViewById(R.id.loginbtn_start);
-        toregister();
-        toLogin();
+        gotoSignUp = findViewById(R.id.signupbtn_start);
+        gotoSignIn = findViewById(R.id.signinbtn_start);
+        toSignUp();
+        toSignIn();
 
 
     }
 
-    private void toLogin() {
-        gotoLogin.setOnClickListener(new View.OnClickListener() {
+    private void toSignIn() {
+        gotoSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Login.class);
+                Intent intent = new Intent(getApplicationContext(),SignIn.class);
                 startActivity(intent);
             }
         });
 
     }
 
-    private void toregister() {
-        gotoRegister.setOnClickListener(new View.OnClickListener() {
+    private void toSignUp() {
+        gotoSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Register.class);
+                Intent intent = new Intent(getApplicationContext(),SignUp.class);
                 startActivity(intent);
             }
         });

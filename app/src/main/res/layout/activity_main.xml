@@ -13,13 +13,13 @@
       android:layout_centerHorizontal="true"
       android:layout_marginTop="45dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PAYO is on its Way Soon"
-        android:fontFamily="@font/montserratbold"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/black"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:fontFamily="@font/montserratbold"
+      android:text="PAYO is on its Way Soon"
+      android:textColor="@color/black"
+      android:textSize="20sp" />
 
 </RelativeLayout>
