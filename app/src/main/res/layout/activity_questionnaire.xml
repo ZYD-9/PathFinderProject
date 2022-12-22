@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/questionnaire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1. WRITTEN COMMUNICATION: The ability to write clearly and concisely and convey information to different readers."
+            android:textSize="12dp"
+            android:textColor="@color/black"/>
+
+        <SeekBar
+            android:id="@+id/seekbarId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:progressTint="@color/black"
+            android:thumbTint="@color/payo_secondary"
+            android:progressBackgroundTint="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:max="5"
+            android:tickMark="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>
