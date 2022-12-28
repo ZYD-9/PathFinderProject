@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Novem"
+            android:fontFamily="@font/arial_regular"
             android:textColor="@color/black"
             android:layout_marginRight="10dp"/>
 
@@ -76,6 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ASSESSMENT"
+            android:fontFamily="@font/arial_geobold"
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="14dp"
@@ -132,6 +134,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1- Strongly Disagree"
+                            android:fontFamily="@font/arial_regular"
                             android:textSize="12dp"
                             android:textColor="@color/black" />
                         <TextView
@@ -139,12 +142,14 @@
                             android:layout_height="wrap_content"
                             android:text="2- Disagree"
                             android:textSize="12dp"
+                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3- Neutral"
                             android:textSize="12dp"
+                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black" />
                     </LinearLayout>
                     <LinearLayout
@@ -158,12 +163,14 @@
                             android:layout_height="wrap_content"
                             android:text="4- Agree"
                             android:textSize="12dp"
+                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5- Strongly Agree"
                             android:textSize="12dp"
+                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </LinearLayout>
@@ -201,6 +208,7 @@
         android:layout_below="@+id/assessment_holder"
         android:background="@drawable/roundbtn"
         android:text="Submit"
+        android:fontFamily="@font/arial_geobold"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="12dp" />

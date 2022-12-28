@@ -25,12 +25,12 @@
             android:id="@+id/seekbarId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="10dp"
+            android:max="5"
+            android:progressBackgroundTint="@color/black"
             android:progressTint="@color/black"
             android:thumbTint="@color/payo_secondary"
-            android:progressBackgroundTint="@color/black"
-            android:layout_marginHorizontal="20dp"
-            android:max="5"
             android:tickMark="@color/black" />
     </LinearLayout>
 

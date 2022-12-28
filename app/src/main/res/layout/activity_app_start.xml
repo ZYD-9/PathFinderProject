@@ -44,6 +44,7 @@
             android:layout_marginTop="90dp"
             android:textStyle="bold"
             android:text="Welcome to PAYO"
+            android:fontFamily="@font/arial_geobold"
             android:textColor="@color/black"
             android:textSize="18dp" />
 
@@ -53,6 +54,7 @@
             android:layout_marginTop="5dp"
             android:layout_gravity="center"
             android:text="Its time to find your path"
+            android:fontFamily="@font/arial_narrow"
             android:textColor="@color/black"
             android:textSize="16dp" />
     </LinearLayout>
@@ -65,6 +67,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/roundbtn"
         android:text="Sign In"
+        android:fontFamily="@font/arial_regular"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="12dp"
@@ -80,6 +83,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/roundbtn"
         android:text="Sign Up"
+        android:fontFamily="@font/arial_regular"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="12dp"
