@@ -1,9 +1,15 @@
 package com.example.pathfinder;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
@@ -11,11 +17,20 @@ public class MainActivity extends AppCompatActivity {
 
     TextView r1, r2, r3, r4, r5, r6;
     PieChart pieChart;
+    FirebaseAuth payoAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        payoAuth = FirebaseAuth.getInstance();
+
+
+
+
 
         r1 = findViewById(R.id.result1);
         r2 = findViewById(R.id.result2);
@@ -26,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
         pieChart = findViewById(R.id.piechart);
 
         setData();
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user =  payoAuth.getCurrentUser();
+        if(user == null){
+            startActivity(new Intent(MainActivity.this,SignIn.class));
+        }
+
     }
 
     private void setData() {
