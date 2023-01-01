@@ -9,7 +9,7 @@ import org.eazegraph.lib.models.PieModel;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView r1, r2, r3, r4, r5, r6;
+    TextView r1, r2, r3;
     PieChart pieChart;
 
     @Override
@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         r1 = findViewById(R.id.result1);
         r2 = findViewById(R.id.result2);
         r3 = findViewById(R.id.result3);
-        r4 = findViewById(R.id.result4);
-        r5 = findViewById(R.id.result5);
-        r6 = findViewById(R.id.result6);
         pieChart = findViewById(R.id.piechart);
 
         setData();
@@ -32,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
         r1.setText(Integer.toString(30));
         r2.setText(Integer.toString(5));
         r3.setText(Integer.toString(15));
-        r4.setText(Integer.toString(10));
-        r5.setText(Integer.toString(25));
-        r6.setText(Integer.toString(15));
 
         pieChart.addPieSlice(
                 new PieModel(
@@ -51,23 +45,6 @@ public class MainActivity extends AppCompatActivity {
                         "Result3",
                         Integer.parseInt(r3.getText().toString()),
                         Color.parseColor("@color/payo_results3")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result4",
-                        Integer.parseInt(r4.getText().toString()),
-                        Color.parseColor("@color/payo_results4")));
-
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result5",
-                        Integer.parseInt(r5.getText().toString()),
-                        Color.parseColor("@color/payo_results5")));
-
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result6",
-                        Integer.parseInt(r6.getText().toString()),
-                        Color.parseColor("@color/payo_results6")));
 
         pieChart.startAnimation();
     }
