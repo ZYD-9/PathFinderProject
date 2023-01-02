@@ -1,51 +1,74 @@
 package com.example.pathfinder;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.graphics.Color;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.widget.TextView;
-import org.eazegraph.lib.charts.PieChart;
-import org.eazegraph.lib.models.PieModel;
+import android.view.MenuItem;
+import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView r1, r2, r3;
-    PieChart pieChart;
+    DrawerLayout drawerLayout;
+    BottomNavigationView bottomNavigationView;
+    AssessmentFragment assessmentFragment = new AssessmentFragment();
+    TrackResultsFragment trackResultsFragment = new TrackResultsFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        r1 = findViewById(R.id.result1);
-        r2 = findViewById(R.id.result2);
-        r3 = findViewById(R.id.result3);
-        pieChart = findViewById(R.id.piechart);
+        drawerLayout = findViewById(R.id.drawerlayer);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        setData();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,assessmentFragment).commit();
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.assessment:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,assessmentFragment).commit();
+                        return true;
+                    case R.id.track_results:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container,trackResultsFragment).commit();
+                        return true;
+                    case R.id.sign_out:
+                        logoutMenu(MainActivity.this);
+                }
+                return false;
+            }
+        });
+    }
+    private void logoutMenu(MainActivity mainActivity){
+        AlertDialog.Builder builder = new AlertDialog.Builder(mainActivity);
+        builder.setTitle("Sign out");
+        builder.setMessage("Are you sure you want to Sign out?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                new SignIn();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+    }
+    public void ClickMenu(View view){
+        openDrawer(drawerLayout);
     }
 
-    private void setData() {
-        r1.setText(Integer.toString(30));
-        r2.setText(Integer.toString(5));
-        r3.setText(Integer.toString(15));
-
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result1",
-                        Integer.parseInt(r1.getText().toString()),
-                        Color.parseColor("@color/payo_results1")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result2",
-                        Integer.parseInt(r2.getText().toString()),
-                        Color.parseColor("@color/payo_results2")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Result3",
-                        Integer.parseInt(r3.getText().toString()),
-                        Color.parseColor("@color/payo_results3")));
-
-        pieChart.startAnimation();
+    private void openDrawer(DrawerLayout drawerLayout){
+        drawerLayout.openDrawer(GravityCompat.START);
     }
 }
