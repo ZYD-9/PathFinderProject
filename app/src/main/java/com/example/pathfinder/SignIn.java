@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class SignIn extends AppCompatActivity {
-    ImageButton gotoAppStart;
+
     EditText username_field;
     EditText password_field;
     Button signIn;
@@ -27,24 +27,13 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        gotoAppStart = findViewById(R.id.signinbtn_back);
+
         username_field = findViewById(R.id.username_in);
         password_field = findViewById(R.id.password_in);
-        signIn = findViewById(R.id.signedin_btn);
+        signIn = findViewById(R.id.signin_btn);
         progressBar = findViewById(R.id.signin_progress);
         signedIn();
-        toAppStart();
 
-
-    }
-    private void toAppStart() {
-        gotoAppStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),AppStart.class);
-                startActivity(intent);
-            }
-        });
 
     }
 
