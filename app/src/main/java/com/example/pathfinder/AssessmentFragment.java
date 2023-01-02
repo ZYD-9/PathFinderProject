@@ -1,32 +1,33 @@
 package com.example.pathfinder;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class Assessment extends AppCompatActivity {
+public class AssessmentFragment extends Fragment {
 
     RecyclerView recyclerView;
     LinearLayoutManager layoutManager;
     List<Item>itemList;
     RecyclerAdapter adapter;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assessment);
-        getSupportActionBar().hide();
 
         initData();
         initRecyclerView();
     }
+
 
     private void initData() {
         itemList=new ArrayList<>();
@@ -47,13 +48,18 @@ public class Assessment extends AppCompatActivity {
         itemList.add(new Item("15. FLEXIBILITY: The ability to carry out a variety of tasks, work in different situations, and manage change in your life and work."));
     }
     private void initRecyclerView() {
-        recyclerView=findViewById(R.id.assessment_questionnaire);
-        layoutManager = new LinearLayoutManager(this);
+        recyclerView= recyclerView.findViewById(R.id.assessment_questionnaire);
+        layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new RecyclerAdapter(itemList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_assessment, container, false);
     }
 }

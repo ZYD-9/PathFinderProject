@@ -4,60 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/payo_primary"
-    tools:context=".Assessment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/white"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_marginLeft="-60dp"
-            android:layout_marginRight="-30dp"
-            android:background="@drawable/wave2" />
-    </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/signupbtn_back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/ic_baseline_menu_24" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="30dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Novem"
-            android:fontFamily="@font/arial_regular"
-            android:textColor="@color/black"
-            android:layout_marginRight="10dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/profile"
-            android:layout_marginRight="20dp"/>
-    </LinearLayout>
+    tools:context=".AssessmentFragment">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/rectangle"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"/>
 
     <LinearLayout
@@ -65,32 +18,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="82dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginTop="28dp"
+        >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/assessment"/>
+            android:layout_marginLeft="-5dp"
+            android:src="@drawable/assessment1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ASSESSMENT"
-            android:fontFamily="@font/arial_geobold"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:textSize="14dp"
-            android:layout_marginLeft="20dp"/>
+            android:textSize="12dp"
+            android:layout_marginLeft="15dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/assessment_fields"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/assessmenttext_holder"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="105dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -115,7 +68,7 @@
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:layout_marginVertical="10dp"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:layout_gravity="center"/>
 
                 <LinearLayout
@@ -134,7 +87,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1- Strongly Disagree"
-                            android:fontFamily="@font/arial_regular"
                             android:textSize="12dp"
                             android:textColor="@color/black" />
                         <TextView
@@ -142,7 +94,6 @@
                             android:layout_height="wrap_content"
                             android:text="2- Disagree"
                             android:textSize="12dp"
-                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black" />
                     </LinearLayout>
                     <LinearLayout
@@ -156,14 +107,12 @@
                             android:layout_height="wrap_content"
                             android:text="4- Agree"
                             android:textSize="12dp"
-                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5- Strongly Agree"
                             android:textSize="12dp"
-                            android:fontFamily="@font/arial_regular"
                             android:textColor="@color/black" />
                     </LinearLayout>
                 </LinearLayout>
@@ -189,8 +138,6 @@
             android:layout_marginVertical="8dp" />
     </androidx.cardview.widget.CardView>
 
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submitbtn"
         android:layout_width="100dp"
@@ -201,10 +148,8 @@
         android:layout_below="@+id/assessment_holder"
         android:background="@drawable/roundbtn"
         android:text="Submit"
-        android:fontFamily="@font/arial_geobold"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="12dp" />
-
 
 </RelativeLayout>
