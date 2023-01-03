@@ -24,6 +24,7 @@
 
         <SeekBar
             android:id="@+id/seekbarId"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
@@ -32,8 +33,7 @@
             android:progressBackgroundTint="@color/black"
             android:progressTint="@color/payo_secondary"
             android:thumbTint="@color/payo_secondary"
-            android:tickMark="@color/black"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"/>
+            android:tickMark="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -53,18 +53,11 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
-      app:menu="@menu/bottom_nav_menu"/>
+      app:menu="@menu/bottom_nav_menu" />
 
-  <RelativeLayout
-      android:layout_width="300dp"
-      android:layout_height="match_parent"
-      android:layout_gravity="start"
-      android:layout_marginTop="60dp"
-      android:layout_marginBottom="60dp">
 
-    <include layout="@layout/activity_topnavigation"/>
 
-  </RelativeLayout>
+
 
 
 

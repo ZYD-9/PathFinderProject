@@ -3,16 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/drawable/appinfo.xml" value="0.117" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/drawable/assessment.xml" value="0.1945" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/drawable/rightbuttomround.xml" value="0.147" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/drawable/roundbtn.xml" value="0.16" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_app_start.xml" value="0.25" />
-        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_assessment.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_assessment.xml" value="0.33" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_main.xml" value="0.48518518518518516" />
-        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_questionnaire.xml" value="0.1" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_main.xml" value="0.39460154241645246" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_questionnaire.xml" value="0.22" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_register.xml" value="0.25280898876404495" />
-        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_signin.xml" value="0.4317937701396348" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_signin.xml" value="0.37273823884197826" />
         <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_signup.xml" value="0.33" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/activity_topnavigation.xml" value="0.209375" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/fragment_assessment.xml" value="0.209375" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/fragment_confirmsignout.xml" value="0.209375" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/layout/fragment_track_results.xml" value="0.209375" />
+        <entry key="..\:/Users/novem/AndroidStudioProjects/PathFinder/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
       </map>
     </option>
   </component>

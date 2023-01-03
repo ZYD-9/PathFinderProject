@@ -1,17 +1,22 @@
 package com.example.pathfinder;
 
-import android.content.DialogInterface;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,14 +24,20 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     AssessmentFragment assessmentFragment = new AssessmentFragment();
     TrackResultsFragment trackResultsFragment = new TrackResultsFragment();
+    Confirmsignout confirmsignoutFragment = new Confirmsignout();
+    FirebaseAuth payoAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_ACTION_BAR);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         drawerLayout = findViewById(R.id.drawerlayer);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        payoAuth = FirebaseAuth.getInstance();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,assessmentFragment).commit();
 
@@ -41,29 +52,24 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.container,trackResultsFragment).commit();
                         return true;
                     case R.id.sign_out:
-                        logoutMenu(MainActivity.this);
+                       getSupportFragmentManager().beginTransaction().replace(R.id.container,confirmsignoutFragment).commit();
                 }
                 return false;
             }
         });
     }
-    private void logoutMenu(MainActivity mainActivity){
-        AlertDialog.Builder builder = new AlertDialog.Builder(mainActivity);
-        builder.setTitle("Sign out");
-        builder.setMessage("Are you sure you want to Sign out?");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                new SignIn();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        });
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = payoAuth.getCurrentUser();
+        if(user == null ){
+            startActivity(new Intent(MainActivity.this,SignIn.class));
+        }
     }
+
+
+
     public void ClickMenu(View view){
         openDrawer(drawerLayout);
     }

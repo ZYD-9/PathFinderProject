@@ -21,39 +21,48 @@ public class TrackResultsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        r1 = r1.findViewById(R.id.result1);
-        r2 = r2.findViewById(R.id.result2);
-        r3 = r3.findViewById(R.id.result3);
-        pieChart = pieChart.findViewById(R.id.piechart);
-
-        setData();
     }
-    private void setData() {
+
+    private void initXml(View v){
+
+        r1 = v.findViewById(R.id.result1);
+        r2 = v.findViewById(R.id.result2);
+        r3 = v.findViewById(R.id.result3);
+        pieChart = v.findViewById(R.id.piechart);
+
+    }
+    private void setData(View v) {
         r1.setText(Integer.toString(30));
         r2.setText(Integer.toString(5));
         r3.setText(Integer.toString(15));
 
         pieChart.addPieSlice(
-                new PieModel(
-                        "Result1",
-                        Integer.parseInt(r1.getText().toString()),
-                        Color.parseColor("@color/payo_results1")));
+                new PieModel("Result1", Integer.parseInt(r1.getText().toString()),
+                        Color.parseColor("#86B049")));
         pieChart.addPieSlice(
                 new PieModel(
                         "Result2",
                         Integer.parseInt(r2.getText().toString()),
-                        Color.parseColor("@color/payo_results2")));
+                        Color.parseColor("#4E97D1")));
         pieChart.addPieSlice(
                 new PieModel(
                         "Result3",
                         Integer.parseInt(r3.getText().toString()),
-                        Color.parseColor("@color/payo_results3")));
+                        Color.parseColor("#F25E74")));
 
         pieChart.startAnimation();
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_track_results, container, false);
+        View v = inflater.inflate(R.layout.fragment_track_results, container, false);
+
+        initXml(v);
+        setData(v);
+
+
+        return v;
     }
 }
