@@ -39,7 +39,7 @@
 
     <LinearLayout
         android:id="@+id/assessment_fields"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/assessmenttext_holder"
         android:layout_width="match_parent"
@@ -105,13 +105,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="4- Agree"
+                            android:text="3- Agree"
                             android:textSize="12dp"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="5- Strongly Agree"
+                            android:text="4- Strongly Agree"
                             android:textSize="12dp"
                             android:textColor="@color/black" />
                     </LinearLayout>
@@ -144,7 +144,7 @@
         android:layout_height="30dp"
         android:layout_below="@+id/assessment_holder"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/roundbtn"
         android:text="Submit"

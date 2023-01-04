@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.sign_out:
                        getSupportFragmentManager().beginTransaction().replace(R.id.container,confirmsignoutFragment).commit();
+                        return true;
                 }
                 return false;
             }

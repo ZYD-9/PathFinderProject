@@ -43,41 +43,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/appinfo" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="App Info"
-                android:textStyle="bold"
-                android:fontFamily="@font/arial_regular"
-                android:textColor="@color/black"
-                android:textSize="14dp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="@font/arial_regular"
-            android:text="Payo is a mobile application that guides students select what track path to pursue. It also allows students to take skill assessments based on their competency. This mobile application will serve as an educational tool. It will be usable for students who aren’t still deciding what track field to take for the Senior High School year. Additionally, students can track their progress based on the assessment results."
-            android:textColor="@color/black"
-            android:textSize="12dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
                 android:src="@drawable/privacypolicy" />
 
             <TextView
@@ -86,7 +51,6 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
                 android:text="Payo Privacy Policy"
-                android:fontFamily="@font/arial_regular"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="14dp" />
@@ -98,7 +62,6 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
-            android:fontFamily="@font/arial_regular"
             android:text="In order to personalized your PAYO experience, and for analytical purposes to improve the app. We collect some personal information. Your privacy is important and our Privacy Policy details how e use and protect your information. By accepting and using the app you confirm you are over 15 years old and agree to the terms in our Privacy Policy."
             android:textColor="@color/black"
             android:textSize="12dp" />

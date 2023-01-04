@@ -5,21 +5,66 @@
     android:layout_height="match_parent"
     tools:context=".Confirmsignout">
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/payologo"/>
+    <LinearLayout
+        android:id="@+id/appinfo_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/payologo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/appinfo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="App Info"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/arial_regular"
+            android:text="Payo is a mobile application that guides students select what track path to pursue. It also allows students to take skill assessments based on their competency. This mobile application will serve as an educational tool. It will be usable for students who aren’t still deciding what track field to take for the Senior High School year. Additionally, students can track their progress based on the assessment results."
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/confirm_signout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/appinfo_holder"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="CONFIRM SIGNOUT "
-        android:textSize="16sp"
-        android:fontFamily="@font/arial_black"/>
+        android:textSize="12sp"
+        android:fontFamily="@font/arial_regular"
+        />
 
 </RelativeLayout>

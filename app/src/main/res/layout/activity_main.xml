@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerlayer"
     tools:context=".MainActivity">
 
   <View
@@ -13,7 +14,7 @@
       android:background="@drawable/actionbar"/>
 
   <ImageButton
-      android:onClick="ClickMenu"
+      android:id="@+id/menu_btn"
       android:layout_width="30dp"
       android:layout_height="30dp"
       android:layout_marginTop="17dp"
