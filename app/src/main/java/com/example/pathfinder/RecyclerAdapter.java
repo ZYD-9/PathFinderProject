@@ -28,11 +28,26 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder,int position) {
         String questions= itemList.get(position).getAssessment();
-        SeekBar seekbar=itemList.get(position).getSeekbar();
+        SeekBar seekbar = itemList.get(position).getSeekbar();
 
-        holder.setData(questions,seekbar);
+        holder.setData(questions);
+        holder.seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Toast.makeText(seekBar.getContext(), String.valueOf(progress), Toast.LENGTH_SHORT).show();
+                itemList.get(position).setValue(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
     }
 
     @Override
@@ -53,21 +68,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             seekBar= itemView.findViewById(R.id.seekbarId);
         }
 
-        public void setData(String questions, SeekBar seekbar){
+        public void setData(String questions){
             textView.setText(questions);
-            seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-                @Override
-                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                }
 
-                @Override
-                public void onStartTrackingTouch(SeekBar seekBar) {
-                }
-
-                @Override
-                public void onStopTrackingTouch(SeekBar seekBar) {
-                }
-            });
         }
 
 

@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser user = payoAuth.getCurrentUser();
-        if(user == null ){
-            startActivity(new Intent(MainActivity.this,SignIn.class));
-        }
+//        FirebaseUser user = payoAuth.getCurrentUser();
+//        if(user == null ){
+//            startActivity(new Intent(MainActivity.this,SignIn.class));
+//        }
     }
 
 
