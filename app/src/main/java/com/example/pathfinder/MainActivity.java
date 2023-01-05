@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        drawerLayout = findViewById(R.id.drawerlayer);
+      //  drawerLayout = findViewById(R.id.drawerlayer);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         payoAuth = FirebaseAuth.getInstance();
 
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.sign_out:
                        getSupportFragmentManager().beginTransaction().replace(R.id.container,confirmsignoutFragment).commit();
+                        return true;
                 }
                 return false;
             }
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
 //        FirebaseUser user = payoAuth.getCurrentUser();
 //        if(user == null ){
 //            startActivity(new Intent(MainActivity.this,SignIn.class));

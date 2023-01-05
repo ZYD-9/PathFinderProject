@@ -27,8 +27,8 @@
     <LinearLayout
         android:id="@+id/logontxt_holder"
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="350dp"
+        android:layout_marginBottom="40dp"
         android:orientation="vertical">
 
         <ImageView
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="40dp"
             android:text="Welcome to PAYO"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -67,14 +67,6 @@
         android:layout_marginBottom="50dp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="85dp"
-            android:text="Email :"
-            android:textSize="12dp"
-            android:textColor="@color/black" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="260dp"
             android:layout_height="40dp"
@@ -86,23 +78,19 @@
                 android:id="@+id/useremail_in"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="Email"
+                android:textSize="14dp"
                 android:layout_marginHorizontal="5dp"
                 android:textAlignment="textStart"
                 android:background="@color/white"/>
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="85dp"
-            android:layout_marginTop="15dp"
-            android:text="Password:"
-            android:textSize="12dp"
-            android:textColor="@color/black" />
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="260dp"
             android:layout_height="40dp"
+            android:layout_marginTop="20dp"
             android:foreground="@drawable/edittext_stroke"
             app:cardCornerRadius="10dp"
             android:layout_gravity="center">
@@ -112,6 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="5dp"
+                android:textSize="14dp"
+                android:hint="Password"
                 android:textAlignment="textStart"
                 android:background="@color/white"/>
         </androidx.cardview.widget.CardView>

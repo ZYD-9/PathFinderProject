@@ -88,9 +88,8 @@ public class AssessmentFragment extends Fragment {
     }
     // RETRIVE DATA
     private void getData() {
-        firestore.collection("SKILL_ASSESMENT_TEST")
-                        .document(firebaseAuth.getUid())
-                                .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        firestore.collection("SKILL_ASSESSMENT_TEST").document(firebaseAuth.getUid()).get().addOnCompleteListener(
+                new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if(task.isSuccessful()){
@@ -117,13 +116,13 @@ public class AssessmentFragment extends Fragment {
             public void onClick(View v) {
 
                 HashMap<String, Object> senddate = new HashMap<>();
-                senddate.put("WRITTEN_COMMUNICATION", itemList.get(0).getValue());
-                senddate.put("VERBAL_COMMUNICATION",  itemList.get(1).getValue());
-                senddate.put("PROBLEM_COMMUNICATION",  itemList.get(2).getValue());
+                senddate.put("WRITTEN_COMMUNICATION",itemList.get(0).getValue());
+                senddate.put("VERBAL_COMMUNICATION",itemList.get(1).getValue());
+                senddate.put("PROBLEM_COMMUNICATION",itemList.get(2).getValue());
                 senddate.put("TEAMWORK",  itemList.get(3).getValue());
-                senddate.put("ANALYTICAL_ABILITY", itemList.get(4).getValue());
-                senddate.put("CREATIVE_THINKING", itemList.get(5).getValue());
-                senddate.put("NUMERCY", itemList.get(6).getValue());
+                senddate.put("ANALYTICAL_ABILITY",itemList.get(4).getValue());
+                senddate.put("CREATIVE_THINKING",itemList.get(5).getValue());
+                senddate.put("NUMERCY",itemList.get(6).getValue());
                 senddate.put("LEADERSHIP",itemList.get(7).getValue());
                 senddate.put("COMMERCIAL_AWARENESS", itemList.get(8).getValue());
                 senddate.put("DECISION_MAKING",itemList.get(9).getValue());
